@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stämpelklocka</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header>
+<main>
+    <h1>Comesi & Gå</h1>
+  </header>
+  <div>
+    <p>Vänligen logga in med ditt personnummer:</p>
+
+    <form action="login" method="get">
+      <input type="number" id="personnummer" placeholder="personnummer" required>
+      <button type="button" onclick="loggaIn()">Logga in</button>
+    </form>
+  </div>
+</main>
+
+<footer>  
+  <p>Made with <i class="fa fa-heart-o"></i> by Nour Solaiman </p></footer>
+
+<!-- JavaScript-kod för att visa och dölja menyn i små skärmar -->
+<script src="smallScreenMenuScript.js"></script>
+<script src="../app.js"></script>
+</body>
+</html>
