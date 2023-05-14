@@ -7,7 +7,6 @@
   <title>Stämpelklocka</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -18,9 +17,10 @@
   <div>
     <p>Vänligen logga in med ditt personnummer:</p>
 
-    <form action="login" method="get">
-      <input type="number" id="personnummer" placeholder="personnummer" required>
-      <button type="button" onclick="loggaIn()">Logga in</button>
+    <form id="login-form">
+      <label for="personnummer">Personnummer:</label><br>
+      <input type="text" id="personnummer" name="personnummer"><br>
+      <input type="submit" value="Logga in">
     </form>
   </div>
 </main>
@@ -30,6 +30,7 @@
 
 <!-- JavaScript-kod för att visa och dölja menyn i små skärmar -->
 <script src="smallScreenMenuScript.js"></script>
-<script src="../app.js"></script>
+<script src="login.js"></script>
+
 </body>
 </html>

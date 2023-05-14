@@ -6,56 +6,28 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<script src="script.js" defer></script>
 </head>
 <body>
 	<header>
 		<h1>Stämpelklocka</h1>
 	</header>
 	<main>
-		<div id= "container", class="stampling-container">
-			<h2><span id="anstalld-id-namn"></span></h2>
-			<p>Du är nu inloggad och kan stämpla in eller ut nedan.</p>
-
-				<form action="/punch-in" method="POST">
-					<input type="hidden" name="stämpla-in" id="stämpla-in">
-					<button type="submit" id="punch-in-btn" onclick="punchIn()">Stämpla in</button>
-				</form>
-				<!--
-				<form action="/break-in" method="POST">
-					<input type="hidden" name="stämplaIn-lunch" id="stämplaIn-lunch">
-					<button type="submit" id="break-in-btn" onclick="breakIn()">Ta paus</button>
-				</form>
-
-				<form action="/break-out" method="POST">
-					<input type="hidden" name="stämplaUt-lunch" id="stämplaUt-lunch">
-					<button type="submit" id="break-out-btn" onclick="breakOut()">Avsluta paus</button>
-				</form>
-				-->
-
-				<form action="/punch-out" method="POST">
-					<input type="hidden" name="stämpla-ut" id="stämpla-ut">
-					<button type="submit" id="punch-out-btn" onclick="punchOut()">Stämpla ut</button>
-				</form>
-
-			<h3>Din senaste stämpling:</h3>
-				<table>					
-					<div id="punch-status"></div>					
-				</table>
-					<button type="button" id="logout-btn" onclick="logOut()">Logga ut</button>
-					<span id="date-time"></span>
-
+		<div class="stampling-container">
+			<button id="stamp-in" class="stamp-btn">Stämpla in</button>
+			<button id="stamp-out" class="stamp-btn">Stämpla ut</button>
+			<!-- <button id="correct-stamp">Korrigera stämplingar</button> -->
+		
+			<div id="stamp-info"></div>
+			<div><button id="logout">Logga ut</button></div>
 
 		</div>
-		
-			
-
 	</main>
 	<footer>  
-		<p>Made with <i class="fa fa-heart-o"></i> by Nour Solaiman </p></footer>
+		<p>Made with <i class="fa fa-heart-o"></i> by Nour Solaiman </p>
+	</footer>
 	
 	<!--create javaScrept function for showing and hiding Menu in small screen mode-->
 	<script src="smallScreenMenuScript.js"></script>
-	<script src="../app.js"></script>
-	</body>
+	<script src="stampelklocka.js"></script>
+</body>
 </html>
