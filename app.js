@@ -93,6 +93,33 @@ app.post('/stamp', (req, res) => {
 
 
 
+
+
+// Hantera korrigera-stämpling begäran
+app.post('/correct-stamp', (req, res) => {
+  const userId = req.body.userId;
+  const stampStatus = req.body.stampStatus;
+  const stampTime = new Date(req.body.stampTime);
+  
+  const user = stamplar.find(u => u.id === parseInt(userId));
+  
+  if (user) {    
+    // Uppdatera stämplingen med de korrigerade värdena
+    user.inStamplad = stampStatus === 'in';
+    user.action = stampStatus;
+    user.timestamp = stampTime.toISOString();
+
+    // Spara uppdaterad användardata till databasen
+    saveToDatabase();
+
+    res.json({ success: true });
+  } else {
+    res.json({ success: false, message: 'Användaren hittades inte.' });
+  }
+});
+
+
+
 app.listen(3000, () => {
   console.log('Server is listening on port 3000');
 });

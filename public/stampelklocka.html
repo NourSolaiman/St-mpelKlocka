@@ -15,8 +15,29 @@
 		<div class="stampling-container">
 			<button id="stamp-in" class="stamp-btn">Stämpla in</button>
 			<button id="stamp-out" class="stamp-btn">Stämpla ut</button>
-			<!-- <button id="correct-stamp">Korrigera stämplingar</button> -->
-		
+
+			<!-- Lägg till en knapp för att öppna korrigera-stämpling-dialogrutan -->
+			<button id="correct-stamp" type="button">Korrigera stämpling</button>
+
+			<!-- Lägg till en dialogruta eller formulär för korrigera-stämpling -->
+			<div id="correct-stamp-dialog" style="display: none;">
+			<h2>Korrigera stämpling</h2>
+			<form id="correct-stamp-form">
+				<label for="user-id">Användar-ID:</label>
+					<input type="text" id="user-id" required>				
+						<label for="stamp-status">Stämplingsstatus:</label>
+							<select id="stamp-status" required>
+							<option value="in">Stämpla in</option>
+							<option value="out">Stämpla ut</option>
+							</select>				
+						<label for="stamp-time">Stämplingstid:</label>
+					<input type="datetime-local" id="stamp-time" required>
+				
+				<button type="submit">Spara korrigering</button>
+			</form>
+			</div>
+
+
 			<div id="stamp-info"></div>
 			<div><button id="logout">Logga ut</button></div>
 
