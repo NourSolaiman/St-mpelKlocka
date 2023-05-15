@@ -93,12 +93,12 @@ body {
 	color: white;
   }
   
-  #status-div {
+  #stamp-info {
 	max-width: 1000px;
 	font-size: 1.2em;
 	margin-top: 20px;
 	padding: 10px;
-	background-color: #224d8f;
+	background-color: #d2d9e2;
 	color: rgb(136, 66, 66);
 	border-radius: 5px;
 	text-align: center;
